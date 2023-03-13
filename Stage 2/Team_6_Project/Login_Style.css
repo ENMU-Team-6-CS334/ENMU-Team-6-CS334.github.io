@@ -40,7 +40,6 @@
   .dropdown {
     position: relative;
     display: inline-block;
-    background-color: ;
   }
   
   .dropdown-content {
@@ -174,4 +173,6 @@
   background-color: rgb(0, 0, 0);
   color: white;
 }
+
+
 
