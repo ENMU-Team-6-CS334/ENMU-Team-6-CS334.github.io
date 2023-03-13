@@ -1,0 +1,231 @@
+/* Jovany Gomez */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Tilt Warp', cursive;
+
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #FDFD96;
+  padding-left: 45px;
+  padding-right: 80px;
+}
+
+body {
+  background: url(BackGround.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+.logo{
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+
+/* Card Information */
+.card {
+  position: relative;
+  width: 190px;
+  height: 254px;
+  background: #fff;
+  border: solid 4px #333;
+  box-shadow: -5px 5px #333;
+  transition: all .2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-right: 40px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px #333;
+}
+.card:active {
+  box-shadow: 0px 0px #333;
+}
+
+.card .img-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter .2s 1s ease-in-out;
+}
+
+.card:hover .img-card {
+  filter: blur(1px);
+}
+
+.card .add-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 50px);
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 250px;
+  font-weight: bold;
+  font-size: 19px;
+  opacity: 0;
+}
+
+.card:hover .add-cart {
+  opacity: 1;
+  transition: opacity .3s 1s ease-in-out;
+}
+
+.card .info-card {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid 1px #333;
+}
+
+.card .info-card p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.img-card{
+  background: url(Images/Bowl.png);
+  background-size: contain;
+ }
+/* Card Information End */
+
+ div{
+  display: inline;
+  float: left;
+ }
+
+ /* FLAVOR IMAGES */
+ .birthdayCake{
+  background-image: url(Images/birthdayCake.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .blackCherry{
+  background-image: url(Images/blackCherry.jpeg);
+  background-size: contain;
+ }
+ .butterPecan{
+  background-image: url(Images/butterPecan.jpeg);
+  background-size: contain;
+ }
+ .chocolate{
+  background-image: url(Images/chocolate.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .cone{
+  background-image: url(Images/cone.jpg);
+  background-size: contain;
+ }
+ .cookiesCream{
+  background-image: url(Images/cookiesCream.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .cottonCandy{
+  background-image: url(Images/cottonCandy.jpeg);
+  background-size: contain;
+ }
+ .mint{
+  background-image: url(Images/mint.jpeg);
+  background-size: contain;
+ }
+ .orangeSherbert{
+  background-image: url(Images/OrangeSherbet.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .peanutButter{
+  background-image: url(Images/peanutButter.jpeg);
+  background-size: contain;
+ }
+ .rockyRoad{
+  background-image: url(Images/rockyRoad.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .strawberry{
+  background-image: url(Images/strawberry.jpeg);
+  background-size: contain;
+ }
+ .vanilla{
+  background-image: url(Images/vanilla.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+/* FLAVOR IMAGES END */
+
+ /* DROP DOWN MENU CODE */
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 25px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #FDFD96;
+
+}
+
+.dropdown-content a:hover {
+  font-weight: bold;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+ /* DROP DOWN MENU END */
