@@ -1,0 +1,277 @@
+<!--David Schmith-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+   <title>IceCream Shop</title>		
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="inventoryManagement.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+
+</head>
+<script>
+ function openForm() {
+  document.getElementById("editForm").style.display = "block";
+  closeCreateForm()
+}
+function closeForm() {
+  document.getElementById("editForm").style.display = "none";
+}
+function openCreateForm() {
+  document.getElementById("createForm").style.display = "block";
+  closeForm()
+}
+function closeCreateForm() {
+  document.getElementById("createForm").style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  let modal = document.getElementById('editForm');
+  if (event.target == modal) {
+    closeForm();
+  }
+}
+</script>
+<body onload="closeForm(),closeCreateForm()">
+    <header>
+        <img class="logo" src="Images/logo-transparent.png" alt="logo">
+        <!-- DROP DOWN CODE -->
+        <div class="dropdown">
+            <button class="dropbtn">☰ Inventory Management</button>
+            <div class="dropdown-content">
+                <a href="orderManagement.html">Order Management</a>
+                <a href="Login_Index.html">Manager Login</a>
+                <a href="Flavors.html">Log Out</a>
+                
+            </div>
+        </div>
+        <!-- DROP DOWN END  -->
+    </header>
+    <p>Inventory</p>
+    <section><div class="card">
+        <div class="img-card">
+            <img src="Images/vanilla.jpeg" alt="vanilla">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Vanilla</strong></p>
+          <p>Price : 5$</p>
+        </div>  
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/chocolate.jpeg" alt="Chocolate">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Chocalate</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/strawberry.jpeg" alt="Strawberry">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>strawberry</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/peanut-butter-scoop.jpg" alt="Peanut Butter">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Peanut Butter</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/birthdayCake.jpeg" alt="Birthday Cake">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Birthday Cake</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/blackCherry.jpeg" alt="Black Cherry">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Black Cherry</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/butterPecan.jpeg" alt="Butter Pecan">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Butter Pecan</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/cookiesCream.jpeg" alt="Cookies">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Cookies</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/cottonCandy.jpeg" alt="Cotton Candy">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Cotton Candy</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/mint.jpeg" alt="Mint">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Mint</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/rockyRoad.jpeg" alt="Rocky Road">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Rocky Road</strong></p>
+          <p>Price : 5$</p>
+        </div>    
+    </div>
+
+    <div class="card">
+        <div class="img-card">
+            <img src="Images/OrangeSherbet.jpg" alt="Orange Sherbet">
+        </div>
+        <div class="add-cart"><button onclick="openForm()">Edit</button></div>
+        <div class="info-card">
+          <p><strong>Orange Sherbet</strong></p>
+          <p>Price : 5$</p>
+        </div>
+    </div>
+</section>
+<section>
+    <p>Add New Flavor</p>
+    <div class ="selectedCard">
+        <div class="card">
+            <div class="img-card">
+                <img src="" alt="">
+            </div>
+            <div class="add-cart"><button onclick="openCreateForm()">Add</button></div>
+            <div class="selected-info-card">
+                <p><strong>Ice Cream</strong></p>
+                <p>Price : $</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="cardForm" id="editForm">
+  <div class="card-header">
+    <div class="text-header">Edit</div>
+  </div>
+  <div class="card-body">
+    <form action="#">
+        <p>Selected Flavor</p>
+    <div class ="selectedCard">
+        <div class="card">
+            <div class="img-card">
+                <img src="" alt="">
+            </div>
+            <div class="add-cart">Edit</div>
+            <div class="selected-info-card">
+                <p><strong>Ice Cream</strong></p>
+                <p>Price : $</p>
+            </div>
+        </div>
+    </div>
+      <div class="form-group" id="editFromGroup">
+        <label for="flavor">Flavor</label>
+        <input required="" class="form-control" name="flavor" id="flavor" type="text">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input required="" class="form-control" name="price" id="price" type="text">
+      </div>
+
+      <button>Submit</button>
+      <button style="color:crimson">Delete</button>
+      <button onclick="closeForm()">Close</button>
+      
+    
+     
+     
+     </div>
+</div>
+</section>
+<section>
+    <div class="cardForm" id="createForm">
+        <div class="card-header">
+          <div class="text-header">Add</div>
+        </div>
+        <div class="card-body">
+          <form action="#">
+              <p>New Flavor</p>
+          <div class ="selectedCard">
+              <div class="card">
+                  <div class="img-card">
+                      <img src="" alt="">
+                  </div>
+                  <div class="add-cart"></div>
+                  <div class="selected-info-card">
+                      <p><strong>Ice Cream</strong></p>
+                      <p>Price : $</p>
+                  </div>
+              </div>
+          </div>
+            <div class="form-group" id="editFromGroup">
+              <label for="flavor">Flavor</label>
+              <input required="" class="form-control" name="flavor" id="flavor" type="text">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input required="" class="form-control" name="price" id="price" type="text">
+            </div>
+            <button>Submit</button>
+            <button onclick="closeCreateForm()">Close</button>
+            
+           
+           </div>
+</section>
+    
+    
+</body>
+</html>

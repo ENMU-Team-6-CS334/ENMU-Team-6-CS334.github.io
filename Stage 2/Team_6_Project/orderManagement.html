@@ -1,0 +1,127 @@
+<!--David Schmith-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="orderManagement.css">
+
+</head>
+<script>
+    function openForm() {
+  document.getElementById("editForm").style.display = "block";
+  closeCreateForm()
+}
+function closeForm() {
+  document.getElementById("editForm").style.display = "none";
+}
+</script>
+<body onload="closeForm()">
+    <header>
+        <img class="logo" src="Images/logo-transparent.png" alt="logo">
+        <!-- DROP DOWN CODE -->
+        <div class="dropdown">
+            <button class="dropbtn">☰ Order Management</button>
+            <div class="dropdown-content">
+                <a href="inventoryManagement.html">Inventory Management</a>
+                <a href="Login_Index.html">Manager Login</a>
+                <a href="Flavors.html">Log Out</a>
+            </div>
+        </div>
+        <!-- DROP DOWN END  -->
+    </header>
+    <!--Table-->
+    <body>
+        <p>Orders</p>
+        <div class="limiter">
+        <div class="container-table100">
+        <div class="wrap-table100">
+        <div class="table100">
+        <table>
+        <thead>
+        <tr class="table100-head">
+        <th class="column1">Date</th>
+        <th class="column2">Order ID</th>
+        <th class="column3">Flavors</th>
+        <th class="column4">Price</th>
+        <th class="column5">Quantity</th>
+        <th class="column6">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td class="column1">2017-09-29 01:22</td>
+        <td class="column2">200398</td>
+        <td class="column3">Chocalate, Vanilla</td>
+        <td class="column4">$2.00</td>
+        <td class="column5">2</td>
+        <td class="column6">$4.00</td>
+        </tr>
+        <tr>
+        <td class="column1">2017-09-28 05:57</td>
+        <td class="column2">200397</td>
+        <td class="column3">Peanut Butter, Cookies</td>
+        <td class="column4">$2.00</td>
+        <td class="column5">2</td>
+        <td class="column6">$4.00</td>
+        </tr>
+        
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        <h1>Order ID</h1>
+        <div class="textInputWrapper">
+            <input placeholder="Type Here" type="text" class="textInput">
+        </div>
+        <button  onclick="openForm()">Edit</button>
+        <button style="color:crimson">Delete</button>
+    
+        <section>
+            <div class="cardForm" id="editForm">
+                <div class="card-header">
+                  <div class="text-header">Edit</div>
+                </div>
+                <div class="card-body">
+                  <form action="#">
+                      <p>Order</p>
+                      
+                      <div class="form-group" id="editFromGroup">
+                        <label for="date">Date</label>
+                        <input required="" class="form-control" name="Date" id="date" type="text">
+                      </div>
+                      <div class="form-group" id="editFromGroup">
+                        <label for="id">Order ID</label>
+                        <input required="" class="form-control" name="id" id="id" type="text">
+                      </div>
+                    <div class="form-group" id="editFromGroup">
+                      <label for="flavors">Flavors</label>
+                      <input required="" class="form-control" name="flavors" id="flavors" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Price</label>
+                      <input required="" class="form-control" name="price" id="price" type="text">
+                    </div>
+                    <div class="form-group" id="editFromGroup">
+                        <label for="Quantity">Quantity</label>
+                        <input required="" class="form-control" name="Quantity" id="Quantity" type="text">
+                      </div>
+                      <div class="form-group" id="editFromGroup">
+                        <label for="Total">Total</label>
+                        <input required="" class="form-control" name="Total" id="Total" type="text">
+                      </div>
+                    <button>Submit</button>
+                    <button onclick="closeForm()">Close</button>
+                    
+                   
+                   </div>
+        </section>
+          
+        
+</body>
+</html>
