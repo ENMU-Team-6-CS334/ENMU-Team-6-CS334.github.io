@@ -1,0 +1,132 @@
+<!--David Schmith-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+   <title>IceCream Shop</title>		
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="inventoryManagement.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="Images/logo-transparent.png" alt="logo">
+        <!-- DROP DOWN CODE -->
+        <div class="dropdown">
+            <button class="dropbtn">☰ Inventory Management</button>
+            <div class="dropdown-content">
+                <a href="orderManagement.html">Order Management</a>
+                <a href="Login_Index.html">Manager Login</a>
+                <a href="Flavors.html">Log Out</a>
+            </div>
+        </div>
+        <!-- DROP DOWN END  -->
+    </header>
+    <p>Inventory</p>
+    <section id="inventoryCards">
+</section>
+<section>
+    <p>Add New Flavor</p>
+      <div class ="selectedCard" id="emptyCard">
+        <div class="card">
+            <div class="img-card">
+                <img src="" alt="">
+            </div>
+            <div class="add-cart"><button onclick="openCreateForm(),document.getElementById('createForm').scrollIntoView()">Add</button></div>
+            <div class="selected-info-card">
+                <p><strong>Ice Cream</strong></p>
+                <p>Price : $</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="cardForm" id="editForm">
+  <div class="card-header">
+    <div class="text-header">Edit</div>
+  </div>
+  <div class="card-body">
+    <form action="#">
+        <p>Selected Flavor</p>
+    <section id="exampleCard">
+      <div class ="selectedCard" id="editEmptyCard">
+        <div class="card">
+            <div class="img-card">
+                <img src="" alt="" id="emptyEditImg">
+            </div>
+            <div class="add-cart"></div>
+            <div class="selected-info-card">
+                <p id="selectedEditFlavor"><strong>Ice Cream</strong></p>
+                <p id ="selectedEditPrice">Price : $</p>
+            </div>
+        </div>
+      </div> 
+      </section>
+    
+      <div class="form-group" id="editFromGroup">
+        <label for="flavor">Flavor</label>
+        <input required="" class="form-control" name="flavor" id="flavor" type="text">
+      </div>
+      <div class="form-group">
+        <label id='labelPrice'for="price">Price</label>
+        <input required="" class="form-control" name="price" id="price" type="number">
+      </div>
+      <div class="form-group">
+        <form>
+          <label id="labelImage" for="upload">Upload an Image</label>
+          <input id="imageEdit" type = "file" name = "upload" accept = "image/*" />
+          <output></output>
+       </form>
+      </div>
+
+      <button onclick="userEditFlavor()">Submit</button>
+      <button onclick="userRemoveFlavor()" style="color:crimson">Delete</button>
+      <button onclick="closeForm(),topFunction()">Close</button>
+     </div>
+</div>
+</section>
+<section>
+    <div class="cardForm" id="createForm">
+        <div class="card-header">
+          <div class="text-header">Add</div>
+        </div>
+        <div class="card-body">
+          <form action="#">
+              <p>New Flavor</p>
+          <div class ="selectedCard">
+              <div class="card">
+                  <div class="img-card">
+                      <img src="" alt="">
+                  </div>
+                  <div class="add-cart"></div>
+                  <div class="selected-info-card">
+                      <p><strong>Ice Cream</strong></p>
+                      <p>Price : $</p>
+                  </div>
+              </div>
+          </div>
+
+            <div class="form-group" id="editFromGroup">
+              <label for="flavor">Flavor</label>
+              <input required="" class="form-control" name="flavorAdd" id="flavorAdd" type="text">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input required="" class="form-control" name="priceAdd" id="priceAdd" type="number">
+            </div>
+            <div class="form-group">
+              <form>
+                <input id="imageAdd" type = "file" name = "upload" accept = "image/*" />
+             </form>
+            </div>
+            <button onclick="userAddFlavor()">Submit</button>
+            <button onclick="closeCreateForm(), topFunction()">Close</button>
+           </div>
+</section>
+<script type="module" src="iMScript.js"></script>
+</body>
+</html>
+
