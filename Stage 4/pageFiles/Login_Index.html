@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login_Style.css" />
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="Images/logo-transparent.png" alt="logo">
+        <!-- DROP DOWN CODE -->
+        <div class="dropdown">
+            <button class="dropbtn">☰ Manager Login</button>
+            <div class="dropdown-content">
+                <a href="Flavors.html">Ice Cream Flavors</a>
+                <a href="payment.html">Checkout</a>
+                
+            </div>
+        </div>
+        <!-- DROP DOWN END  -->
+    </header>
+</body>
+<div class="container">
+        <div class="card">
+            <a class="login">Log in</a>
+        <form id="loginForm" action="#" method="post">
+            <div class="inputBox">
+                <input type="text" id="Username" required="required" onchange="getUsername()">
+                <span class="user">Username</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" id="MyPassword" required="required" onchange="getPassword()">
+                <span>Password</span>
+            </div>
+             <a href="inventoryManagement.html"><button onclick="needPassword()" class="enter">Enter</button></a>
+        </form>
+           
+
+        </div>
+    </div>
+    <script src="Login_Index.js"></script>
+</html>

@@ -1,0 +1,60 @@
+
+
+{"flavors" : [
+    {
+        "flavor": "Vanilla",
+        "price": 5,
+        "image": "Images/vanilla.jpeg"
+    },
+    {
+        "flavor": "Chocalate",
+        "price": 5,
+        "image": "Images/chocolate.jpeg"
+    },
+    {
+        "flavor": "Strawberry",
+        "price": 5,
+        "image": "Images/strawberry.jpeg"
+    },
+    {
+        "flavor": "Peanut Butter",
+        "price": 5,
+        "image": "Images/peanut-butter-scoop.jpg"
+    },
+    {
+        "flavor": "Birthday Cake",
+        "price": 5,
+        "image": "Images/birthdayCake.jpeg"
+    },
+    {
+        "flavor": "Black Cherry",
+        "price": 5,
+        "image": "Images/blackCherry.jpeg"
+    },
+    {
+        "flavor": "Butter Pecan",
+        "price": 5,
+        "image": "Images/butterPecan.jpeg"
+    },
+    {
+        "flavor": "Cookies",
+        "price": 5,
+        "image": "Images/cookiesCream.jpeg"
+    },
+    {
+        "flavor": "Cotton Candy",
+        "price": 5,
+        "image": "Images/cottonCandy.jpeg"
+    },
+    {
+        "flavor": "Mint",
+        "price": 5,
+        "image": "Images/mint.jpeg"
+    },
+    {
+        "flavor": "Rocky Road",
+        "price": 5,
+        "image": "Images/rockyRoad.jpeg"
+    }
+]
+}

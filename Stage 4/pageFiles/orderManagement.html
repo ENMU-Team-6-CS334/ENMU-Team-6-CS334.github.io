@@ -1,0 +1,147 @@
+<!--David Schmith-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Header</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="orderManagement.css">
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="Images/logo-transparent.png" alt="logo">
+        <!-- DROP DOWN CODE -->
+        <div class="dropdown">
+            <button class="dropbtn">☰ Order Management</button>
+            <div class="dropdown-content">
+                <a href="inventoryManagement.html">Inventory Management</a>
+                <a href="Login_Index.html">Manager Login</a>
+                <a href="Flavors.html">Log Out</a>
+            </div>
+        </div>
+        <!-- DROP DOWN END  -->
+    </header>
+    <!--Table-->
+    <body>
+        <p>Orders</p>
+        <div class="limiter">
+        <div class="container-table100">
+        <div class="wrap-table100">
+        <div class="table100">
+        <table>
+        <thead>
+        <tr class="table100-head">
+        <th class="column1">Date</th>
+        <th class="column2">Order ID</th>
+        <th class="column3">Flavors</th>
+        <th class="column4">Price</th>
+        <th class="column5">Quantity</th>
+        <th class="column6">Total</th>
+        </tr>
+        </thead>
+        <tbody id="tableContents">
+        
+        
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        <h1>Order ID</h1>
+        <div class="textInputWrapper">
+            <input id="idField"placeholder="Type Here" type="text" class="textInput">
+        </div>
+        <section id="inputButtons">
+          <button id="addButton" onclick="openAddForm(),document.getElementById('addPrice').scrollIntoView()">Add</button>
+          <button  id="editButton" onclick="openForm(),document.getElementById('editprice').scrollIntoView(),setEditOrder()">Edit</button>
+          <button onclick='userRemoveOrder()' style="color:crimson">Delete</button>
+        </section>
+        
+    
+        <section>
+            <div class="cardForm" id="editForm">
+                <div class="card-header">
+                  <div class="text-header">Edit</div>
+                </div>
+                <div class="card-body">
+                  <form action="#">
+                      <p>Order</p>
+                      
+                      <div class="form-group" id="editFromGroup">
+                        <label for="date">Date</label>
+                        <input required="" class="form-control" name="Date" id="editdate" type="text">
+                      </div>
+                      <div class="form-group" id="editFromGroup">
+                        <label for="id">Order ID</label>
+                        <input required="" class="form-control" name="id" id="editid" type="text">
+                      </div>
+                    <div class="form-group" id="editFromGroup">
+                      <label for="flavors">Flavors</label>
+                      <input required="" class="form-control" name="flavors" id="editflavors" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label for="price">Price</label>
+                      <input required="" class="form-control" name="price" id="editprice" type="number">
+                    </div>
+                    <div class="form-group" id="editFromGroup">
+                        <label for="Quantity">Quantity</label>
+                        <input required="" class="form-control" name="Quantity" id="editQuantity" type="number">
+                      </div>
+                      <div class="form-group" id="editFromGroup">
+                        <label for="Total">Total</label>
+                        <input required="" class="form-control" name="Total" id="editTotal" type="number">
+                      </div>
+                    <button onclick="userEditOrder()">Submit</button>
+                    <button onclick="closeForm()">Close</button>
+                    
+                   
+                   </div>
+        </section>
+        <section>
+          <div class="cardForm" id="addForm">
+              <div class="card-header">
+                <div class="text-header">Add</div>
+              </div>
+              <div class="card-body">
+                <form action="#">
+                    <p>Order</p>
+                    
+                    <div class="form-group" id="editFromGroup">
+                      <label for="date">Date</label>
+                      <input required="" class="form-control" name="Date" id="addDate" type="text">
+                    </div>
+                    <div class="form-group" id="editFromGroup">
+                      <label for="id">Order ID</label>
+                      <input required="" class="form-control" name="id" id="addID" type="text">
+                    </div>
+                  <div class="form-group" id="editFromGroup">
+                    <label for="flavors">Flavors</label>
+                    <input required="" class="form-control" name="flavors" id="addFlavors" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input required="" class="form-control" name="price" id="addPrice" type="number">
+                  </div>
+                  <div class="form-group" id="editFromGroup">
+                      <label for="Quantity">Quantity</label>
+                      <input required="" class="form-control" name="Quantity" id="addQuant" type="number">
+                    </div>
+                    <div class="form-group" id="editFromGroup">
+                      <label for="Total">Total</label>
+                      <input class="form-control" name="Total" id="addTotal" type="number">
+                    </div>
+                  <button onclick="userAddOrder()">Submit</button>
+                  <button onclick="closeAddForm()">Close</button>
+                  
+                 
+                 </div>
+      </section>
+          
+        <script type="module" src="oMScript.js"></script>
+</body>
+</html>

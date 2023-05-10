@@ -1,0 +1,472 @@
+/*David Schmith*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Warp', cursive;
+  
+  
+  }
+  p{
+    font-size: x-large;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h1{
+    font-size:x-large;
+    
+
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    background-color: #FDFD96;
+  }
+  body {
+    background: url(BackGround.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+  
+  .logo{
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+  }
+
+  .selectedCard .card{
+    width: 160px;
+    height: 225px;
+  }
+  .selectedCard .card .selected-info-card{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1px #333;
+   }
+   .selectedCard .card .selected-info-card p{
+    font-size: 14px;
+    margin: 5px;
+   }
+
+   .selectedCard .card:hover .add-cart {
+    
+    opacity: 1;
+    transition: opacity .3s .5s ease-in-out;
+  }
+  button{
+    margin: 0;
+    padding:0;
+    border-style: none;
+    background: none;
+    cursor:pointer;
+    font-size: 19px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 19px;
+    
+  }
+  .selectedCard button{
+    margin: 0;
+    padding:0;
+    border-style: none;
+    background: none;
+    cursor:pointer;
+    font-size: 19px;
+    text-align: center;
+    line-height: 167px;
+    font-weight: bold;
+    
+  }
+  
+
+
+  
+  
+
+
+  /*Components*/
+
+    /*Cards*/
+  .img-card img{
+    max-width: 85px;
+    max-height: 50px;
+
+  }
+  
+  section{
+    text-align: center;
+  }
+  
+  
+
+  .card {
+  
+    position: relative;
+    width: 95px;
+    height: 127px;
+    background: #fff;
+    border: solid 4px #333;
+    box-shadow: -5px 5px #333;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    justify-content: center;
+    
+    
+  }
+  
+  .card:hover {
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px #333;
+  }
+  
+  .card .img-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter .2s .5s ease-in-out;
+    
+  }
+  
+  .card:hover .img-card {
+    filter: blur(1px);
+  }
+  
+  .card .add-cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100%-50px);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 19px;
+    opacity: 0;
+  }
+  
+  .card:hover .add-cart {
+    opacity: 1;
+    transition: opacity .3s .5s ease-in-out;
+  }
+  
+  .card .info-card {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1px #333;
+  }
+  
+  .card .info-card p {
+    font-size: 10px;
+    margin: 5px;
+  }
+  
+
+
+
+  /*Text input*/
+  .textInputWrapper {
+    position: relative;
+    width: 180px;
+    margin: 12px 5px;
+    --accent-color: #a3e583;
+  }
+  
+  .textInputWrapper:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .textInputWrapper:before,
+  .textInputWrapper:after {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: -1px;
+    z-index: 4;
+    width: 100%;
+  }
+  
+  .textInputWrapper:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+  }
+  
+  .textInputWrapper:before {
+    transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+  
+  .textInputWrapper:focus-within:before {
+    border-bottom: 1px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .textInputWrapper:focus-within:after {
+    border-bottom: 2px solid var(--accent-color);
+    transform: scaleX(1);
+  }
+  
+  .textInputWrapper:after {
+    content: "";
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    will-change: transform;
+    border-bottom: 2px solid var(--accent-color);
+    border-bottom-color: var(--accent-color);
+  }
+  
+  .textInput::placeholder {
+    transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    opacity: 1;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.582);
+  }
+  
+  .textInputWrapper .textInput {
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+    max-height: 36px;
+    background-color: #252525;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 200ms;
+    transition-property: background-color;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  .textInputWrapper .textInput:focus,
+  .textInputWrapper .textInput:active {
+    outline: none;
+  }
+  
+  .textInputWrapper:focus-within .textInput,
+  .textInputWrapper .textInput:focus,
+  .textInputWrapper .textInput:active {
+    background-color: #353535;
+  }
+  
+  .textInputWrapper:focus-within .textInput::placeholder {
+    opacity: 0;
+  }
+  
+
+
+/*Form*/
+.cardForm {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px;
+  
+  position:absolute;
+  align-self: center;
+  z-index: 2 Q;
+  background-color:#FDFD96;
+  visibility: visible;
+  
+
+}
+
+.card-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-header .text-header {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="flavor"],
+.form-group input[type="price"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+.btn {
+  padding: 12px 24px;
+  margin-left: 13px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+.cardForm button {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  margin-top: 5px;
+  margin-bottom:5px;
+  padding-right: 20px;
+  padding-left:20px;
+  
+}
+
+.cardForm button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+};
+
+.cardForm button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+};
+
+
+/*DropDown Menu*/
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 25px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #FDFD96;
+
+}
+
+.dropdown-content a:hover {
+  font-weight: bold;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+
+header button{
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#editForm {
+  width: 54.55%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 700px;
+  position: relative;
+  
+}
+#editForm:target {
+  visibility: visible;
+  display: block;
+}
+.cardForm {
+  position: relative;
+  margin: 0 auto;
+  
+  top: 25%;
+}
+
+#createForm {
+  width: 54.55%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 600px;
+  position: relative;
+  
+}
+#createForm:target {
+  visibility: visible;
+  display: block;
+}
+
+#emptyEditImg {
+  max-width: 150px;
+  max-height: 120px;
+}
+  
